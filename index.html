@@ -4,10 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Sa Hình 3D</title>
-    <script type="module" crossorigin src="./assets/index-DQPIsfWJ.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Dd3JVOXE.css">
+    <script type="module" crossorigin src="./assets/index-Dp2R5IjB.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-XvF-gzd2.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><p style="color:#8ea0b0;font-family:system-ui,sans-serif;text-align:center;padding-top:40vh">Đang tải Sa Hình 3D…</p></div>
+    <script>
+      // Trang cũ còn trong bộ nhớ trình duyệt mà file JS đã đổi sau khi deploy: tự tải lại một lần lấy bản mới.
+      (function () {
+        var KEY = 'sahinh.reloaded';
+        function reloadOnce() {
+          try {
+            if (sessionStorage.getItem(KEY)) return;
+            sessionStorage.setItem(KEY, '1');
+          } catch (e) {}
+          location.reload();
+        }
+        window.addEventListener('error', function (e) {
+          var t = e.target;
+          if (t && (t.tagName === 'SCRIPT' || t.tagName === 'LINK')) reloadOnce();
+        }, true);
+        window.addEventListener('vite:preloadError', reloadOnce);
+        window.addEventListener('load', function () {
+          setTimeout(function () { try { sessionStorage.removeItem(KEY); } catch (e) {} }, 5000);
+        });
+      })();
+    </script>
   </body>
 </html>
