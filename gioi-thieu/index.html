@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Sa Hình 3D · Luyện thi bằng lái B miễn phí</title>
+  <meta name="description" content="Làm quen sân thi sa hình 3D 11 bài, xem lái mẫu rồi tự lái thử, thi lý thuyết 600 câu đúng giao diện thật. Miễn phí 100%, không quảng cáo, không cần tài khoản." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sa Hình 3D · Luyện thi bằng lái B miễn phí" />
+  <meta property="og:description" content="Làm quen sân thi 3D, xem lái mẫu, tự lái thử và thi lý thuyết 600 câu đúng giao diện thật. Miễn phí 100%." />
+  <meta property="og:image" content="https://baokiinkk.github.io/sahinh-3d/gioi-thieu/img/anh-bia.jpg" />
+  <meta property="og:url" content="https://baokiinkk.github.io/sahinh-3d/gioi-thieu/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #06090c; --bg2: #0c2a24; --panel: #0f161d; --panel2: #141d26; --line: #233040;
+      --text: #f2f6f8; --muted: #a9b8c4; --teal: #2dd4bf; --green: #17b583; --amber: #f5a524;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: "Be Vietnam Pro", system-ui, sans-serif; line-height: 1.6; }
+    img, video { max-width: 100%; display: block; }
+    a { color: var(--teal); }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    .glow { background: radial-gradient(900px 500px at 85% -10%, rgba(45, 212, 191, .18), transparent 60%), linear-gradient(160deg, var(--bg) 30%, var(--bg2)); }
+    header.top { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+    .brand { font-weight: 800; font-size: 1.2rem; color: var(--teal); text-decoration: none; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 22px; border-radius: 14px; font-weight: 800; text-decoration: none; transition: transform .15s, box-shadow .15s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.primary { background: linear-gradient(90deg, var(--green), #0d9488); color: #fff; box-shadow: 0 10px 30px rgba(23, 181, 131, .35); }
+    .btn.ghost { border: 1px solid var(--line); color: var(--text); background: rgba(255, 255, 255, .03); }
+    .btn.small { padding: 9px 16px; font-size: .9rem; }
+    .pill { display: inline-block; padding: 4px 14px; border: 1px solid rgba(45, 212, 191, .5); background: rgba(45, 212, 191, .1); color: var(--teal); border-radius: 99px; font-weight: 600; font-size: .85rem; letter-spacing: .03em; }
+    .hero { display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center; padding: 40px 0 80px; }
+    .hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.12; margin: 18px 0 16px; }
+    .hero h1 em { font-style: normal; color: var(--teal); }
+    .hero p.lead { color: var(--muted); font-size: 1.1rem; max-width: 520px; margin: 0 0 28px; }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .ticks { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 22px; color: var(--muted); font-size: .92rem; }
+    .ticks span::before { content: "✓ "; color: var(--teal); font-weight: 800; }
+    .hero-shot { position: relative; }
+    .hero-shot .main { border-radius: 20px; border: 1px solid rgba(255, 255, 255, .12); box-shadow: 0 30px 80px rgba(0, 0, 0, .6); }
+    .hero-shot .phone { position: absolute; right: -10px; bottom: -40px; width: 58%; border-radius: 16px; border: 6px solid #111; box-shadow: 0 20px 50px rgba(0, 0, 0, .7); }
+    section { padding: 80px 0; }
+    .sec-head { text-align: center; max-width: 680px; margin: 0 auto 44px; }
+    .sec-head h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); line-height: 1.2; margin: 14px 0 10px; }
+    .sec-head p { color: var(--muted); margin: 0; }
+    .video-row { display: grid; grid-template-columns: 360px 1fr; gap: 48px; align-items: center; }
+    .video-frame { border-radius: 32px; border: 8px solid #111; overflow: hidden; box-shadow: 0 30px 80px rgba(0, 0, 0, .6); background: #000; aspect-ratio: 9 / 16; }
+    .video-frame video { width: 100%; height: 100%; object-fit: cover; }
+    .video-row ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
+    .video-row li { display: flex; gap: 14px; align-items: flex-start; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; }
+    .video-row li b { display: block; }
+    .video-row li span { color: var(--muted); font-size: .95rem; }
+    .num { flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--green); color: #fff; font-weight: 800; display: grid; place-items: center; }
+    .feature { display: grid; grid-template-columns: 1fr 1.15fr; gap: 48px; align-items: center; margin-bottom: 90px; }
+    .feature:nth-child(even) { grid-template-columns: 1.15fr 1fr; }
+    .feature:nth-child(even) .f-text { order: 2; }
+    .feature h3 { font-size: clamp(1.5rem, 3vw, 2.1rem); line-height: 1.2; margin: 12px 0 12px; }
+    .feature h3 em { font-style: normal; color: var(--teal); }
+    .feature p { color: var(--muted); margin: 0 0 14px; }
+    .feature ul { padding-left: 1.1em; margin: 0; color: #c8d2da; }
+    .feature li { margin-bottom: 6px; }
+    .f-shot { border-radius: 18px; border: 1px solid rgba(255, 255, 255, .12); box-shadow: 0 24px 60px rgba(0, 0, 0, .55); }
+    .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .donate { background: linear-gradient(160deg, #1d1406, #0c1a16); border: 1px solid rgba(245, 165, 36, .35); border-radius: 28px; padding: 44px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 40px; align-items: center; }
+    .donate h2 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); line-height: 1.2; margin: 14px 0 12px; }
+    .donate h2 em { font-style: normal; color: var(--amber); }
+    .donate p { color: #d6cbb5; }
+    .donate .pill { color: var(--amber); border-color: rgba(245, 165, 36, .5); background: rgba(245, 165, 36, .1); }
+    .qr { background: #fff; border-radius: 22px; padding: 14px; text-align: center; color: #17202a; }
+    .qr img { border-radius: 12px; margin: 0 auto; }
+    .qr b { display: block; margin-top: 10px; letter-spacing: .03em; }
+    .qr .acc { font: 800 1.4rem ui-monospace, Menlo, monospace; color: #c46f00; }
+    .qr small { color: #5e6b78; }
+    .final { text-align: center; }
+    .final h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 12px; }
+    .final p { color: var(--muted); margin: 0 0 26px; }
+    footer { border-top: 1px solid var(--line); padding: 30px 0 50px; color: var(--muted); font-size: .85rem; }
+    footer p { margin: 0 0 8px; }
+    @media (max-width: 900px) {
+      .hero, .video-row, .feature, .feature:nth-child(even), .donate { grid-template-columns: 1fr; }
+      .feature:nth-child(even) .f-text { order: 0; }
+      .hero { padding-bottom: 90px; }
+      .video-frame { max-width: 320px; margin: 0 auto; }
+      .donate { padding: 26px; }
+      .qr { max-width: 320px; margin: 0 auto; }
+      section { padding: 56px 0; }
+      .feature { margin-bottom: 60px; }
+    }
+    @media (max-width: 520px) {
+      .top .btn.small { display: none; }
+      .btn { width: 100%; justify-content: center; }
+      .hero-shot .phone { right: 0; bottom: -46px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow">
+    <div class="wrap">
+      <header class="top">
+        <a class="brand" href="../">🚗 Sa Hình 3D</a>
+        <a class="btn primary small" href="../">Vào luyện ngay →</a>
+      </header>
+      <div class="hero">
+        <div>
+          <span class="pill">MIỄN PHÍ 100% · KHÔNG QUẢNG CÁO</span>
+          <h1>Luyện thi bằng lái&nbsp;B<br /><em>như đang ở sân thi&nbsp;thật</em></h1>
+          <p class="lead">Làm quen sân sa hình 11 bài bằng mô phỏng 3D, xem tài xế lái mẫu rồi tự lái thử, và thi lý thuyết 600 câu đúng giao diện phần mềm thi thật. Chạy ngay trên trình duyệt, máy tính hay điện thoại đều được.</p>
+          <div class="cta">
+            <a class="btn primary" href="../">🚗 Vào luyện ngay</a>
+            <a class="btn ghost" href="#video">▶ Xem video giới thiệu</a>
+          </div>
+          <div class="ticks"><span>Không cần cài đặt</span><span>Không cần tài khoản</span><span>Máy tính, iPhone, iPad</span></div>
+        </div>
+        <div class="hero-shot">
+          <img class="main" src="img/lai-mau.jpg" alt="Sa hình 3D: xe đang lái mẫu bài ghép xe dọc" />
+          <img class="phone" src="img/dien-thoai.jpg" alt="Giao diện lái trên điện thoại với vô lăng, côn, phanh, ga" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="video">
+    <div class="wrap video-row">
+      <div class="video-frame">
+        <video src="video-quang-cao.mp4" poster="img/video-poster.jpg" controls playsinline preload="none" aria-label="Video giới thiệu Sa Hình 3D"></video>
+      </div>
+      <div>
+        <span class="pill">30 GIÂY LÀ HIỂU</span>
+        <h2 style="font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.2;margin:14px 0 22px">Ôn đủ cả sa hình lẫn lý thuyết ở một chỗ</h2>
+        <ul>
+          <li><span class="num">1</span><div><b>Làm quen sân thi</b><span>Sân 3D theo sơ đồ sân thi, đủ 11 bài hạng B, chấm điểm tự động.</span></div></li>
+          <li><span class="num">2</span><div><b>Xem lái mẫu, rồi tự lái</b><span>Tài xế tự động làm mẫu từng bài kèm giải thích, sau đó bạn tự cầm lái.</span></div></li>
+          <li><span class="num">3</span><div><b>Thi lý thuyết đúng format</b><span>30 câu, 20 phút, có câu điểm liệt, giao diện như phần mềm thi thật.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="pill">TÍNH NĂNG</span>
+        <h2>Mọi thứ cần để tự tin bước vào phòng thi</h2>
+        <p>Thiết kế cho người đang học bằng B: dễ dùng, chính xác, miễn phí.</p>
+      </div>
+
+      <div class="feature">
+        <div class="f-text">
+          <span class="pill">SA HÌNH 3D</span>
+          <h3>Làm quen sân thi <em>trước ngày thi thật</em></h3>
+          <p>Biết trước từng bài nằm ở đâu, đi theo thứ tự nào, lỗi nào bị trừ điểm. Vào sân thật không còn bỡ ngỡ.</p>
+          <ul>
+            <li>Đủ 11 bài thi hạng B, chấm theo Thông tư 12/2025/TT-BCA</li>
+            <li>Luyện riêng từng bài, thi bao nhiêu lần cũng được</li>
+            <li>Đèn tín hiệu, tình huống nguy hiểm, giờ thi như thật</li>
+          </ul>
+        </div>
+        <img class="f-shot" src="img/lai-mau.jpg" alt="Toàn cảnh sân thi sa hình 3D" loading="lazy" />
+      </div>
+
+      <div class="feature">
+        <div class="f-text">
+          <span class="pill">XEM &amp; TỰ THỰC HÀNH</span>
+          <h3>Xem tài xế lái mẫu, <em>rồi tự tay lái lại</em></h3>
+          <p>Lái mẫu trọn 11 bài, giải thích các bước và mẹo từng bài, tua x1, x2, x5. Bài ghép xe dọc và ghép ngang còn cho chọn cách ghép để xem.</p>
+          <ul>
+            <li>Tự lái số sàn hoặc số tự động: côn, phanh, ga, xi-nhan, dây an toàn</li>
+            <li>Nhìn từ cabin như người lái thật, có gương chiếu hậu</li>
+            <li>Trên điện thoại: vô lăng xoay bằng tay, bấm nhiều nút cùng lúc</li>
+          </ul>
+        </div>
+        <div class="duo">
+          <img class="f-shot" src="img/chon-cach-ghep.jpg" alt="Chọn cách ghép xe khi xem lái mẫu" loading="lazy" />
+          <img class="f-shot" src="img/cabin.jpg" alt="Góc nhìn trong cabin khi tự lái" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="f-text">
+          <span class="pill">LÝ THUYẾT 600 CÂU</span>
+          <h3>Thi thử <em>đúng giao diện thật</em></h3>
+          <p>Làm quen với phần mềm thi sát hạch trước khi vào phòng thi: cách chọn đáp án, đổi câu, nộp bài, xem kết quả đậu hay rớt.</p>
+          <ul>
+            <li>Bộ 600 câu của Cục CSGT, có đủ hình biển báo và sa hình</li>
+            <li>Đề hạng B: 30 câu, 20 phút, có câu điểm liệt</li>
+            <li>20 đề cố định và đề ngẫu nhiên</li>
+          </ul>
+        </div>
+        <img class="f-shot" src="img/thi-thu.jpg" alt="Giao diện thi thử lý thuyết giống phần mềm thi thật" loading="lazy" />
+      </div>
+
+      <div class="feature">
+        <div class="f-text">
+          <span class="pill">LUYỆN TẬP CÓ MẸO</span>
+          <h3>Bấm là biết đúng sai, <em>kèm mẹo nhớ</em></h3>
+          <p>Mỗi câu chỉ rõ đáp án đúng, mẹo áp dụng và cảnh báo những câu bẫy không dùng được mẹo.</p>
+          <ul>
+            <li>Luyện theo chương, 60 câu điểm liệt, câu hay sai, câu đã lưu</li>
+            <li>Thống kê tiến độ, lưu ngay trên máy của bạn</li>
+          </ul>
+        </div>
+        <img class="f-shot" src="img/luyen-ly-thuyet.jpg" alt="Luyện 600 câu lý thuyết kèm mẹo" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section id="ung-ho">
+    <div class="wrap">
+      <div class="donate">
+        <div>
+          <span class="pill">ỦNG HỘ NHÀ PHÁT TRIỂN</span>
+          <h2>Miễn phí cho tất cả.<br /><em>Ủng hộ nếu thấy có ích.</em></h2>
+          <p>Sa Hình 3D do một cá nhân tự làm và duy trì, không quảng cáo, không thu phí. Mỗi khoản ủng hộ, dù chỉ một ly cà phê, giúp mình có thêm thời gian làm các sân thi khác, cải thiện đồ hoạ, cách chấm điểm và trải nghiệm trên điện thoại.</p>
+          <p>Gặp lỗi hay có góp ý? Gửi về <a href="mailto:baokiinkk@gmail.com">baokiinkk@gmail.com</a>.</p>
+          <div class="cta" style="margin-top:20px"><a class="btn primary" href="../">🚗 Vào luyện ngay</a></div>
+        </div>
+        <div class="qr">
+          <img src="../donate/qr-techcombank.jpg" alt="Mã VietQR ủng hộ Techcombank HO MINH QUOC BAO" loading="lazy" />
+          <b>HO MINH QUOC BAO</b>
+          <div class="acc">9014 0519 99</div>
+          <small>Techcombank · quét bằng app ngân hàng bất kỳ</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2>Sẵn sàng thử chưa?</h2>
+      <p>Mở là dùng được ngay, không cần đăng ký.</p>
+      <a class="btn primary" href="../">🚗 Vào luyện ngay tại baokiinkk.github.io/sahinh-3d</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p><b>Lưu ý:</b> Sa Hình 3D là công cụ mô phỏng và ôn luyện miễn phí, chỉ mang tính tham khảo, không thay thế bài sát hạch chính thức. Website không phải sản phẩm và không liên kết với Bộ Công an, Cục Cảnh sát giao thông hay trung tâm sát hạch nào.</p>
+      <p>Câu hỏi lý thuyết: bộ 600 câu của Cục CSGT (CV 2262/CSGT-P5). <a href="../#phap-ly">Thông tin pháp lý và miễn trừ trách nhiệm</a></p>
+    </div>
+  </footer>
+</body>
+</html>
