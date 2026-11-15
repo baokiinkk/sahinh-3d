@@ -84,7 +84,7 @@
     @media (max-width: 900px) {
       .hero, .video-row, .feature, .feature:nth-child(even), .donate { grid-template-columns: 1fr; }
       .feature:nth-child(even) .f-text { order: 0; }
-      .hero { padding-bottom: 90px; }
+      .hero { padding-bottom: 70px; }
       .video-frame { max-width: 320px; margin: 0 auto; }
       .donate { padding: 26px; }
       .qr { max-width: 320px; margin: 0 auto; }
@@ -96,6 +96,17 @@
       .btn { width: 100%; justify-content: center; }
       .hero-shot .phone { right: 0; bottom: -46px; }
     }
+    .collage { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .tile { position: relative; margin: 0; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255, 255, 255, .12); box-shadow: 0 18px 50px rgba(0, 0, 0, .55); aspect-ratio: 16 / 10; background: #0b0f14; }
+    .tile.wide { grid-column: span 2; aspect-ratio: 16 / 7; }
+    .tile img { width: 100%; height: 100%; object-fit: cover; }
+    .tile figcaption { position: absolute; left: 10px; bottom: 10px; background: rgba(6, 9, 12, .85); border: 1px solid rgba(45, 212, 191, .45); color: var(--text); font-weight: 700; font-size: .85rem; padding: 5px 11px; border-radius: 99px; }
+    .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding-bottom: 70px; margin-top: -30px; }
+    .pillar { display: flex; flex-direction: column; gap: 4px; background: rgba(15, 22, 29, .85); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; text-decoration: none; color: var(--text); transition: border-color .15s, transform .15s; }
+    .pillar:hover { border-color: var(--teal); transform: translateY(-2px); }
+    .pillar span { color: var(--muted); font-size: .9rem; line-height: 1.45; }
+    @media (max-width: 900px) { .pillars { grid-template-columns: 1fr 1fr; margin-top: -50px; } }
+    @media (max-width: 520px) { .pillars { grid-template-columns: 1fr; } .tile figcaption { font-size: .78rem; } }
   </style>
 </head>
 <body>
@@ -116,10 +127,18 @@
           </div>
           <div class="ticks"><span>Không cần cài đặt</span><span>Không cần tài khoản</span><span>Máy tính, iPhone, iPad</span></div>
         </div>
-        <div class="hero-shot">
-          <img class="main" src="img/lai-mau.jpg" alt="Sa hình 3D: xe đang lái mẫu bài ghép xe dọc" />
-          <img class="phone" src="img/dien-thoai.jpg" alt="Giao diện lái trên điện thoại với vô lăng, côn, phanh, ga" loading="lazy" />
+        <div class="collage" aria-label="Các tính năng chính">
+          <figure class="tile wide"><img src="img/lai-mau.jpg" alt="Sân sa hình 3D 11 bài, xe đang lái mẫu" /><figcaption>🏁 Sân sa hình 3D · 11 bài</figcaption></figure>
+          <figure class="tile"><img src="img/dien-thoai.jpg" alt="Tự lái thử trên điện thoại" style="object-position:30% 60%" /><figcaption>🚗 Tự lái thử</figcaption></figure>
+          <figure class="tile"><img src="img/thi-thu.jpg" alt="Thi thử lý thuyết giống phần mềm thi thật" style="object-position:50% 20%" /><figcaption>📝 Thi thử lý thuyết</figcaption></figure>
+          <figure class="tile wide"><img src="img/luyen-ly-thuyet.jpg" alt="Luyện 600 câu kèm mẹo nhớ" style="object-position:70% 25%" /><figcaption>💡 600 câu có mẹo nhớ</figcaption></figure>
         </div>
+      </div>
+      <div class="pillars">
+        <a href="#sa-hinh" class="pillar"><b>🏁 Làm quen sân thi</b><span>Sân 3D đủ 11 bài hạng B, chấm điểm tự động</span></a>
+        <a href="#lai-mau" class="pillar"><b>👀 Xem mẫu & tự lái</b><span>Lái mẫu có giải thích, rồi tự lái số sàn / tự động</span></a>
+        <a href="#ly-thuyet" class="pillar"><b>📝 Thi lý thuyết thật</b><span>30 câu, 20 phút, điểm liệt, đúng giao diện thi</span></a>
+        <a href="#meo" class="pillar"><b>💡 600 câu có mẹo</b><span>Bấm là biết đúng sai, chỉ rõ mẹo và câu bẫy</span></a>
       </div>
     </div>
   </div>
@@ -149,7 +168,7 @@
         <p>Thiết kế cho người đang học bằng B: dễ dùng, chính xác, miễn phí.</p>
       </div>
 
-      <div class="feature">
+      <div class="feature" id="sa-hinh">
         <div class="f-text">
           <span class="pill">SA HÌNH 3D</span>
           <h3>Làm quen sân thi <em>trước ngày thi thật</em></h3>
@@ -163,7 +182,7 @@
         <img class="f-shot" src="img/lai-mau.jpg" alt="Toàn cảnh sân thi sa hình 3D" loading="lazy" />
       </div>
 
-      <div class="feature">
+      <div class="feature" id="lai-mau">
         <div class="f-text">
           <span class="pill">XEM &amp; TỰ THỰC HÀNH</span>
           <h3>Xem tài xế lái mẫu, <em>rồi tự tay lái lại</em></h3>
@@ -180,7 +199,7 @@
         </div>
       </div>
 
-      <div class="feature">
+      <div class="feature" id="ly-thuyet">
         <div class="f-text">
           <span class="pill">LÝ THUYẾT 600 CÂU</span>
           <h3>Thi thử <em>đúng giao diện thật</em></h3>
@@ -194,7 +213,7 @@
         <img class="f-shot" src="img/thi-thu.jpg" alt="Giao diện thi thử lý thuyết giống phần mềm thi thật" loading="lazy" />
       </div>
 
-      <div class="feature">
+      <div class="feature" id="meo">
         <div class="f-text">
           <span class="pill">LUYỆN TẬP CÓ MẸO</span>
           <h3>Bấm là biết đúng sai, <em>kèm mẹo nhớ</em></h3>
